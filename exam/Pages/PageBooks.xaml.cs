@@ -57,10 +57,6 @@ namespace exam.Pages
             }
         }
 
-        private void ShowBasket_Click(object sender, RoutedEventArgs e)
-        {
-            LoadPages.MainFrame.Navigate(new PageBasket(Basket));
-        }
 
         private void AddBook_Click(object sender, RoutedEventArgs e)
         {
@@ -97,6 +93,10 @@ namespace exam.Pages
                 }
                 else MessageBox.Show("Книги нет в наличии");
             }
+        }
+        private void ShowBasket_Click(object sender, RoutedEventArgs e)
+        {
+            LoadPages.MainFrame.Navigate(new PageBasket(Basket));
         }
 
     }

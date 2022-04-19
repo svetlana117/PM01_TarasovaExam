@@ -20,9 +20,28 @@ namespace exam.Pages
     /// </summary>
     public partial class PageBasket : Page
     {
-        public PageBasket(List<Books> busket)
+        double sale = 0;
+        List<Books> Basket;
+        public PageBasket(List<Books> basket)
         {
             InitializeComponent();
+            Basket = basket;
+            double cost = 0;
+            int Count = 0;
+            foreach (Books bb in basket)
+            {
+                Count += Convert.ToInt32(bb.CountBook);
+                cost = cost + Convert.ToDouble(bb.Price) * Count;
+            }
+            sale = dll.dll.SaleCost(Count, cost);
+            List<Books> busketInList = new List<Books>();
+            foreach (Books book in basket.Distinct().ToList())
+            {
+                book.CostSale = " " + (Math.Floor(Convert.ToDouble(book.Price) - (Convert.ToDouble(book.Price) * sale))).ToString();
+                busketInList.Add(book);
+            }
+            BusketListBox.ItemsSource = busketInList;
+            Basket = busketInList;
         }
 
         private void GoBack_Click(object sender, RoutedEventArgs e)

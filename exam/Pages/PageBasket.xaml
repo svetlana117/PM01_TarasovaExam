@@ -13,7 +13,7 @@
             <Border HorizontalAlignment="Center" BorderThickness="1 1 1 1" Margin="0 2 2 0 " BorderBrush="Black" Width="750">
                 <StackPanel Orientation="Horizontal" Width="750">
                     <Border BorderThickness="1 1 1 1">
-                        <Image Height="100" Width="100" Source="{Binding PathImage}"/>
+                        <Image Height="100" Width="100" Source="{Binding ImagePath}"/>
                     </Border>
                     <StackPanel Orientation="Vertical" Margin="10 5 5 5">
                         <StackPanel Orientation="Horizontal">
