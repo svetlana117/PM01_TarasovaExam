@@ -10,7 +10,7 @@
 
     <Page.Resources>
         <DataTemplate x:Key="ItemBook">
-            <Border HorizontalAlignment="Center" BorderThickness="1 1 1 1" Margin="0 2 2 0 " BorderBrush="Black" Width="750">
+            <Border HorizontalAlignment="Center" BorderThickness="1 1 1 1" Margin="0 2 2 0 " BorderBrush="#FFD700" Width="750">
                 <StackPanel Orientation="Horizontal" Width="750">
                     <Border BorderThickness="1 1 1 1">
                         <Image Height="100" Width="100" Source="{Binding ImagePath}"/>
@@ -35,7 +35,7 @@
                             <TextBlock Text="{Binding CostSale}"/>
                             <TextBlock Text=" руб."/>
                         </StackPanel>
-                        <Button Content="Удалить из корзины" Uid="{Binding id}" Name="DeleteBookInBusket" />
+                        <Button Content="Удалить из корзины" Uid="{Binding id}" Name="DeleteBookInBusket" Style="{StaticResource btnStyle}" />
                     </StackPanel>
                 </StackPanel>
             </Border>
@@ -48,10 +48,10 @@
         </Grid.RowDefinitions>
         <StackPanel Grid.Row="0" Orientation="Horizontal">
             <Button x:Name="GoBack" Content="Назад" Style="{StaticResource btnStyle}" Width=" 100" Height="25" Click="GoBack_Click"/>
-            <Button x:Name="Clear" Content="Очистить" Style="{StaticResource btnStyle}" Width=" 100" Height="25"/>
+            <Button x:Name="Clear" Content="Очистить" Style="{StaticResource btnStyle}" Width=" 100" Height="25" Click="Clear_Click"/>
             <Button x:Name="MadeOrder" Content="Оформить заказ" Style="{StaticResource btnStyle}" Width=" 100" Height="25"/>
         </StackPanel>
 
-        <ListBox x:Name="BusketListBox" ItemTemplate="{StaticResource ItemBook}" Grid.Row="1"/>
+        <ListBox x:Name="BasketListBox" ItemTemplate="{StaticResource ItemBook}" Grid.Row="1"/>
     </Grid>
 </Page>

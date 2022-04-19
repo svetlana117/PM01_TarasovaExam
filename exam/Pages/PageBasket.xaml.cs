@@ -40,13 +40,20 @@ namespace exam.Pages
                 book.CostSale = " " + (Math.Floor(Convert.ToDouble(book.Price) - (Convert.ToDouble(book.Price) * sale))).ToString();
                 busketInList.Add(book);
             }
-            BusketListBox.ItemsSource = busketInList;
+            BasketListBox.ItemsSource = busketInList;
             Basket = busketInList;
         }
 
         private void GoBack_Click(object sender, RoutedEventArgs e)
         {
             LoadPages.MainFrame.GoBack();
+        }
+
+        private void Clear_Click(object sender, RoutedEventArgs e)
+        {
+            Basket.Clear();
+            BasketListBox.ItemsSource = Basket;
+            BasketListBox.Items.Refresh();
         }
     }
 }
