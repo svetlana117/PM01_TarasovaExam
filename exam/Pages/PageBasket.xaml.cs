@@ -33,7 +33,7 @@ namespace exam.Pages
                 Count += Convert.ToInt32(bb.CountBook);
                 cost = cost + Convert.ToDouble(bb.Price) * Count;
             }
-            sale = dll.dll.SaleCost(Count, cost);
+            sale = dll.Dll.SaleCost(Count, cost);
             List<Books> busketInList = new List<Books>();
             foreach (Books book in basket.Distinct().ToList())
             {

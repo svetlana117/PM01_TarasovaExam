@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace dll
 {
-    public class dll
+    public class Dll
     {
         public static double SaleCost(int countBook, double Cost)
         {

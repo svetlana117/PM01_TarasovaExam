@@ -43,7 +43,7 @@ namespace exam.Pages
                 cost = cost + Convert.ToDouble(book1.Price) * Convert.ToDouble(book1.CountBook);
             }
             CountSelectBook.Text = count.ToString();
-            double Sale = dll.dll.SaleCost(Convert.ToInt32(count), cost);
+            double Sale = dll.Dll.SaleCost(Convert.ToInt32(count), cost);
             СostSaleSelectBook.Text = " " + (cost - (cost * Sale)).ToString();
             СostSelectBook.Text = cost.ToString();
             СostSelectBook.Visibility = Visibility.Visible;
@@ -84,7 +84,7 @@ namespace exam.Pages
                         cost = cost + Convert.ToDouble(bb.Price) * Convert.ToDouble(bb.CountBook);
                     }
                     CountSelectBook.Text = count.ToString();
-                    double Sale = dll.dll.SaleCost(Convert.ToInt32(count), cost);
+                    double Sale = dll.Dll.SaleCost(Convert.ToInt32(count), cost);
                     СostSaleSelectBook.Text = " " + (cost - (cost * Sale)).ToString();
                     СostSelectBook.Text = cost.ToString();
                     СostSelectBook.Visibility = Visibility.Visible;
