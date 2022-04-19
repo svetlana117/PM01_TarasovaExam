@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="152966b7a5c44296bc6acddeaa97a1e7" Name="Diagram1">
+        <EntityTypeShape EntityType="P_Tarasova_examModel.Books" Width="1.5" PointX="0.75" PointY="1" />
+        <EntityTypeShape EntityType="P_Tarasova_examModel.Orders" Width="1.5" PointX="3" PointY="1.375" />
+        <AssociationConnector Association="P_Tarasova_examModel.FK_Orders_Books" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
