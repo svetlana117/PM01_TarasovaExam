@@ -33,7 +33,7 @@
             <RowDefinition Height="1*"/>
             <RowDefinition Height="5*"/>
         </Grid.RowDefinitions>
-        <Button x:Name="ShowBasket" Width="150" Height="25" Content="Перейти в корзину" HorizontalAlignment="Left" Margin="10 0 0 0" Style="{StaticResource btnStyle}"/>
+        <Button x:Name="ShowBasket" Width="150" Height="25" Content="Перейти в корзину" HorizontalAlignment="Left" Margin="10 0 0 0" Style="{StaticResource btnStyle}" Click="ShowBasket_Click" />
         <Border BorderThickness="1 1 1 1" BorderBrush="#FFD700" Width="300" Margin="0 0 5 0" Height="50" HorizontalAlignment="Right">
             <StackPanel Orientation="Vertical">
                 <StackPanel Orientation="Horizontal">

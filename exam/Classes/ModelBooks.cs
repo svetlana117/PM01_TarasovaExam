@@ -16,6 +16,8 @@ namespace exam
         public string Row5 { get; set; }
         public string Row6 { get; set; }
         public string ImagePath { get; set; }
+        public string CostSale { get; set; }
+        public string CountBook { get; set; }
         public static List<Books> GetBooks()
         {
             List<Books> ListBooks = BaseConnect.BaseModel.Books.ToList();
