@@ -61,5 +61,43 @@ namespace exam.Pages
         {
             LoadPages.MainFrame.Navigate(new PageBasket(Basket));
         }
+
+        private void AddBook_Click(object sender, RoutedEventArgs e)
+        {
+            Button senderButton = (Button)sender;
+            int id = Convert.ToInt32(senderButton.Uid);
+            Books book = ListBooks.FirstOrDefault(x => x.id == id);
+            if (book != null)
+            {
+                if (Convert.ToInt32(book.CountBook) + 1 <= book.CouinInStock + book.CountInStore)
+                {
+                    book.CountBook = (Convert.ToInt32(book.CountBook) + 1).ToString();
+                    if (Basket.Where(x => x.id == id).Count() > 0)
+                    {
+                    }
+                    else
+                    {
+                        Basket.Add(ListBooks.FirstOrDefault(x => x.id == id));
+                    }
+                    ListBoxBooks.ItemsSource = ListBooks;
+                    double cost = 0;
+                    int count = 0;
+                    foreach (Books bb in Basket)
+                    {
+                        count += Convert.ToInt32(bb.CountBook);
+                        cost = cost + Convert.ToDouble(bb.Price) * Convert.ToDouble(bb.CountBook);
+                    }
+                    CountSelectBook.Text = count.ToString();
+                    double Sale = dll.dll.SaleCost(Convert.ToInt32(count), cost);
+                    СostSaleSelectBook.Text = " " + (cost - (cost * Sale)).ToString();
+                    СostSelectBook.Text = cost.ToString();
+                    СostSelectBook.Visibility = Visibility.Visible;
+                    ListBoxBooks.Items.Refresh();
+                    SaleProcentBook.Text = (Sale * 100).ToString();
+                }
+                else MessageBox.Show("Книги нет в наличии");
+            }
+        }
+
     }
 }

@@ -22,7 +22,7 @@
                         <StackPanel Width="500">
                             <TextBlock Text="{Binding Row6}" TextWrapping="Wrap"/>
                         </StackPanel>
-                        <Button Name="AddButton"  Content="Добавить в корзину" Uid="{Binding id}"  Style="{StaticResource btnStyle}" Width="150" HorizontalAlignment="Center" Margin="10"/>
+                        <Button Name="AddBook"  Content="Добавить в корзину" Uid="{Binding id}"  Style="{StaticResource btnStyle}" Width="150" HorizontalAlignment="Center" Margin="10" Click="AddBook_Click"/>
                     </StackPanel>
                 </StackPanel>
             </Border>
