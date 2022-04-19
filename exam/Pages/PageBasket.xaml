@@ -35,7 +35,7 @@
                             <TextBlock Text="{Binding CostSale}"/>
                             <TextBlock Text=" руб."/>
                         </StackPanel>
-                        <Button Content="Удалить из корзины" Uid="{Binding id}" Name="DeleteBookInBusket" Style="{StaticResource btnStyle}" />
+                        <Button Content="Удалить из корзины" Uid="{Binding id}" Name="DeleteBook" Style="{StaticResource btnStyle}" Click="DeleteBook_Click"/>
                     </StackPanel>
                 </StackPanel>
             </Border>

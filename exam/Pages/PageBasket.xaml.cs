@@ -55,5 +55,13 @@ namespace exam.Pages
             BasketListBox.ItemsSource = Basket;
             BasketListBox.Items.Refresh();
         }
+
+        private void DeleteBook_Click(object sender, RoutedEventArgs e)
+        {
+            Button button = (Button)sender;
+            int id = Convert.ToInt32(button.Uid);
+            Basket.Remove(Basket.FirstOrDefault(x => x.id == id));
+            BasketListBox.Items.Refresh();
+        }
     }
 }
